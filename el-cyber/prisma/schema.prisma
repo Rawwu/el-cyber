@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Comment {
+  id         String   @id @default(uuid())
+  postSlug   String   @map("post_slug")
+  name       String
+  email      String?
+  comment    String   @db.Text
+  isApproved Boolean  @default(false) @map("is_approved")
+  createdAt  DateTime @default(now()) @map("created_at")
+  
+  @@index([postSlug])
+  @@index([isApproved])
+  @@map("comments")
+}
