@@ -1,0 +1,67 @@
+---
+title: "Getting Started with Next.js 15"
+date: 2025-10-10
+description: "A comprehensive guide to building modern web applications with Next.js 15 and the App Router."
+tags: ["nextjs", "react", "tutorial"]
+published: true
+---
+
+# Getting Started with Next.js 15
+
+Next.js 15 brings incredible improvements to the developer experience and application performance. In this guide, we'll explore the key features and how to get started.
+
+## Why Next.js?
+
+Next.js is a React framework that provides:
+
+- **Server-Side Rendering (SSR)** - Fast initial page loads
+- **Static Site Generation (SSG)** - Pre-rendered pages at build time
+- **API Routes** - Build your backend alongside your frontend
+- **File-based Routing** - Intuitive routing system
+
+## Key Features in Next.js 15
+
+### 1. App Router
+
+The App Router is the new paradigm for building Next.js applications. It introduces:
+
+- React Server Components by default
+- Improved layouts and nested routing
+- Built-in loading and error states
+```typescript
+// app/page.tsx
+export default function HomePage() {
+  return <h1>Welcome to Next.js 15!</h1>;
+}
+```
+
+### 2. Server Actions
+
+Server Actions allow you to run server-side code directly from your components:
+```typescript
+async function createPost(formData: FormData) {
+  'use server';
+  
+  const title = formData.get('title');
+  // Save to database
+}
+```
+
+### 3. Turbopack
+
+Next.js 15 includes Turbopack, a new bundler written in Rust that's significantly faster than Webpack.
+
+## Getting Started
+
+Install Next.js with:
+```bash
+npx create-next-app@latest my-app
+cd my-app
+npm run dev
+```
+
+That's it! You now have a working Next.js application.
+
+## Conclusion
+
+Next.js 15 is a powerful framework for building modern web applications. With its focus on performance and developer experience, it's an excellent choice for your next project.

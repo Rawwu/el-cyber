@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
       <section className="mb-16">
-        <h1 className="text-4xl font-bold mb-4">Welcome to My Blog</h1>
+        <h1 className="text-4xl font-bold mb-4">Welcome to El Cyber</h1>
         <p className="text-xl text-[rgb(var(--color-muted-foreground))]">
           Thoughts, stories, and ideas on technology, development, and life.
         </p>

@@ -1,0 +1,62 @@
+---
+title: "10 Tailwind CSS Tips for Better Productivity"
+date: 2025-10-05
+description: "Boost your productivity with these essential Tailwind CSS tips and tricks for modern web development."
+tags: ["css", "tailwind", "tips"]
+published: true
+---
+
+# 10 Tailwind CSS Tips for Better Productivity
+
+Tailwind CSS has revolutionized how we write CSS. Here are 10 tips to make you even more productive.
+
+## 1. Use @apply for Repeated Patterns
+
+Instead of repeating utility classes, extract them:
+```css
+.btn-primary {
+  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
+}
+```
+
+## 2. Leverage Arbitrary Values
+
+Need a specific value? Use square brackets:
+```html
+<div class="top-[117px] w-[347px]">
+  Custom values!
+</div>
+```
+
+## 3. Master the Container Class
+
+The container class is your friend for responsive layouts:
+```html
+<div class="container mx-auto px-4">
+  <!-- Centered, responsive content -->
+</div>
+```
+
+## 4. Use Space and Divide Utilities
+
+Stop manually adding margins between elements:
+```html
+<div class="space-y-4">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+```
+
+## 5. Dark Mode is Built-in
+
+Add dark mode variants effortlessly:
+```html
+<div class="bg-white dark:bg-gray-900 text-black dark:text-white">
+  Automatic dark mode!
+</div>
+```
+
+## Conclusion
+
+These tips will help you write cleaner, more maintainable Tailwind CSS. Happy coding!
