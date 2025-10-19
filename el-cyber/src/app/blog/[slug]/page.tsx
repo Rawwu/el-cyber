@@ -7,6 +7,7 @@ import Link from "next/link";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import { CommentSection } from "@/components/blog/comment-section";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -113,13 +114,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Divider before comments */}
       <hr className="my-12 border-[rgb(var(--color-border))]" />
 
-      {/* Comments section placeholder */}
-      <div id="comments">
-        <h2 className="text-2xl font-bold mb-6">Comments</h2>
-        <p className="text-[rgb(var(--color-muted-foreground))]">
-          Comments section coming soon...
-        </p>
-      </div>
+      {/* Comments section */}
+      <CommentSection postSlug={post.slug} />
     </article>
   );
 }
