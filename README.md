@@ -1,2 +1,3 @@
-# el-cyber
-My blog
+# El Cyber Blog
+
+Tech blog para todos
