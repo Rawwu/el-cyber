@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "El Cyber",
   description: "Read my latest blog posts about technology, development, and more.",
 };
 

@@ -21,7 +21,7 @@ export function Header() {
     <header className="border-b border-[rgb(var(--color-border))]">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-4xl">
         <Link href="/" className="text-2xl font-bold">
-          My Blog
+          El Cyber
         </Link>
         <nav className="flex items-center gap-6">
           <Link 

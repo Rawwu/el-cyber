@@ -10,7 +10,7 @@ export default function HomePage() {
       <section className="mb-16">
         <h1 className="text-4xl font-bold mb-4">Welcome to El Cyber</h1>
         <p className="text-xl text-[rgb(var(--color-muted-foreground))]">
-          Thoughts, stories, and ideas on technology, development, and life.
+          Weaving Networks || Tejiendo Redes
         </p>
       </section>
 

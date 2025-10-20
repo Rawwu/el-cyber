@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "My Blog",
-    template: "%s | My Blog",
+    default: "El Cyber",
+    template: "%s",
   },
-  description: "A minimal, SEO-friendly personal blog",
+  description: "A minimal personal blog about tech and development",
   keywords: ["blog", "personal", "tech", "writing"],
 };
 
