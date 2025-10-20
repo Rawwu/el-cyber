@@ -11,6 +11,7 @@ export function CommentForm({ postSlug, onCommentSubmitted }: CommentFormProps) 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
+  const [honeypot, setHoneypot] = useState(""); // Honeypot field
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState<{
     type: "success" | "error";
@@ -33,6 +34,7 @@ export function CommentForm({ postSlug, onCommentSubmitted }: CommentFormProps) 
           name,
           email,
           comment,
+          honeypot,
         }),
       });
 
@@ -47,6 +49,7 @@ export function CommentForm({ postSlug, onCommentSubmitted }: CommentFormProps) 
         setName("");
         setEmail("");
         setComment("");
+        setHoneypot("");
         // Notify parent component
         onCommentSubmitted?.();
       } else {
@@ -67,6 +70,20 @@ export function CommentForm({ postSlug, onCommentSubmitted }: CommentFormProps) 
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot field - hidden from users, visible to bots */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div>
         <label
           htmlFor="name"
