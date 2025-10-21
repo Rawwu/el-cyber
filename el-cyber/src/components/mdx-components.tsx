@@ -2,9 +2,19 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Image from "next/image";
 import Link from "next/link";
 
+interface LinkProps {
+  href?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+interface MDXContentProps {
+  source: MDXRemoteSerializeResult;
+}
+
 const components = {
   Image,
-  a: ({ href, children, ...props }: any) => {
+  a: ({ href, children, ...props }: LinkProps) => {
     if (href?.startsWith("/")) {
       return (
         <Link href={href} {...props}>
@@ -22,10 +32,6 @@ const components = {
     );
   },
 };
-
-interface MDXContentProps {
-  source: MDXRemoteSerializeResult;
-}
 
 export function MDXContent({ source }: MDXContentProps) {
   return (

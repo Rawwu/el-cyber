@@ -11,7 +11,7 @@ export function CommentForm({ postSlug, onCommentSubmitted }: CommentFormProps) 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
-  const [honeypot, setHoneypot] = useState(""); // Honeypot field
+  const [honeypot, setHoneypot] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState<{
     type: "success" | "error";
@@ -58,7 +58,7 @@ export function CommentForm({ postSlug, onCommentSubmitted }: CommentFormProps) 
           text: data.error || "Failed to submit comment",
         });
       }
-    } catch (error) {
+    } catch {
       setMessage({
         type: "error",
         text: "An error occurred. Please try again.",

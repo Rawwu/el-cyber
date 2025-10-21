@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   let post;
   try {
     post = getPostBySlug(slug);
-  } catch (error) {
+  } catch {
     notFound();
   }
 
